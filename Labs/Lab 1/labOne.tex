@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\author{Nicholas Petrilli }
+
+
+\title{	
+   \normalfont \normalsize 
+   \textsc{CMPT 333 - Fall 2021 - Dr. Labouseur} \\[10pt] % Header stuff.
+   \textsc{Lab One}
+}
+
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{What is a single assignment?}
+
+
+\noindent
+Single assignment variables can only be given a value once. The variable cannot be changed after it has been set. 
+
+\section{What is the difference between a bound and unbound variable?}
+
+A variable is bound when it has a value assigned to it and variables that don't have a value assigned to it are unbound. 
+
+\section{How does variable scope work in the Erlang environment?}
+
+\noindent
+The scope of a variable is the unit in which it was defined. If a variable is defined inside of a function, the variable's scope is limited to that function. 
+
+\section{Does Erlang implement mutable or immutable memory state? Why?}
+
+\noindent
+Erlang implements an immutable memory state. Memory is not shared between processes due to the single assignment of variables, they cannot change after being assigned. 
+
+\section{Describe Erlang's memory management system.}
+
+\noindent
+Erlang uses a garbage collection memory management process. Memory that is no longer referenced by the program is reclaimed by the garbage collector. This also means that it is impossible for a process to corrupt the memory of another process. 
+
+\section{What does "Erlang" mean or stand for, if anything?}
+
+\noindent
+Erlang was developed at Ericsson CS lab, and it means Ericcson Language. Erlang is also a measure of traffic load used in the telecoms industry, which is why it was chosen as the name for the language. 
+
+\section{Contrast "soft real time" from "hard real time".}
+
+\noindent
+In a soft real time system, if one deadline is missed it will not cause a complete system failure. In a hard real time system, one missed deadline may lead to a complete system failure. 
+
+\section{Why is Erlang so well suited for concurrency-oriented programming?}
+
+\noindent
+Erlang is so well suited for concurrency-oriented programming because concurrency is provided by the Erlang virtual machine rather than by the operating system or external libraries. Erlang uses concurrency to structure the application through processes. 
+
+\section{Explain Erlang's "let it crash" philosophy.}
+
+\noindent
+Erlang's let it crash philosophy handles errors remotely instead of locally. If one process dies, another process is notified and fixes it. It is not up to the first process to fix itself, which allows for a fault tolerant system. 
+
+\section{What's the difference between a tuple and a list?}
+
+\noindent
+A tuple is used to store a fixed number of items, whereas a list is used to store arbitrary numbers of things. Also, tuples can store values of different types but lists store the same type. 
+
+\section{What's BEAM?}
+
+\noindent
+BEAM stands for Bogdan's Erlang Abstract Machine. Erlang programs are compiled into BEAM instructions with the BEAM compiler. BEAM instructions can be compiled to C code. 
+
+\section{How can it be that we can create more Erlang "processes" that are allowed for in the operating system?}
+
+\noindent
+Due to the fact that concurrency is provided by the Erlang VM, it does not create an OS thread for every process that is created. The Erlang processes are handled in the virtual machine, and are independent of the operating system. 
+
+\end{document}
