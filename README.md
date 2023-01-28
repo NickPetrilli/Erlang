@@ -1,2 +1,2 @@
-# cmpt333petrilli
-Language Study: Erlang
+# CMPT333 Language Study: Erlang
+
